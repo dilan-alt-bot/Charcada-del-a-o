@@ -289,3 +289,305 @@
   gap: 20px;
 }
 
+.informacion-page {
+  min-height: 100vh;
+  margin: 0;
+  padding: 48px 24px 72px;
+  background:
+    radial-gradient(ellipse at 12% 0%, rgba(47, 138, 99, 0.16), transparent 34rem),
+    #f1f7f3;
+  color: #202526;
+  font-family: "Trebuchet MS", Arial, sans-serif;
+}
+
+.informacion {
+  width: min(100%, 960px);
+  margin: 0 auto;
+}
+
+.informacion-hero {
+  padding-bottom: 30px;
+}
+
+.informacion-volver {
+  display: inline-block;
+  margin-bottom: 38px;
+  color: #39775f;
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.informacion-volver:hover,
+.informacion-volver:focus-visible {
+  color: #174d38;
+}
+
+.informacion-etiqueta {
+  margin: 0 0 9px;
+  color: #14805e;
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.informacion-hero h1 {
+  margin: 0;
+  font-size: clamp(2.8rem, 8vw, 5rem);
+  letter-spacing: -0.06em;
+  line-height: 1;
+}
+
+.informacion-intro {
+  margin: 14px 0 0;
+  color: #53615a;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.evento-datos {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+  margin-bottom: 62px;
+}
+
+.evento-dato {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  min-height: 116px;
+  padding: 22px;
+  border: 1px solid #e0e9e2;
+  border-radius: 14px;
+  background: #fff;
+  box-shadow: 0 12px 28px rgba(34, 74, 53, 0.06);
+}
+
+.evento-dato-icono {
+  display: grid;
+  width: 38px;
+  height: 38px;
+  flex: 0 0 38px;
+  place-items: center;
+  border-radius: 11px;
+  background: #e8f4ed;
+  color: #14805e;
+  font-size: 1.2rem;
+  font-weight: 800;
+}
+
+.evento-dato h2 {
+  margin: 1px 0 7px;
+  color: #718078;
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.evento-dato p {
+  margin: 0;
+  color: #202526;
+  font-size: 0.98rem;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.evento-seccion-titulo {
+  margin-bottom: 22px;
+}
+
+.evento-seccion-titulo h2 {
+  margin: 0;
+  font-size: clamp(2rem, 5vw, 3rem);
+  letter-spacing: -0.05em;
+}
+
+.evento-seccion-titulo > p:last-child {
+  margin: 8px 0 0;
+  color: #647069;
+}
+
+.tabla-combates-contenedor {
+  overflow: hidden;
+  border: 1px solid #e0e9e2;
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: 0 16px 40px rgba(34, 74, 53, 0.08);
+}
+
+.tabla-combates {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.tabla-combates th {
+  padding: 15px 24px;
+  background: #e8f4ed;
+  color: #39775f;
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.tabla-combates th:nth-child(2) {
+  width: 72px;
+  text-align: center;
+}
+
+.tabla-combates td {
+  padding: 14px 24px;
+  border-top: 1px solid #edf1ee;
+}
+
+.tabla-combates tbody tr {
+  transition: background 160ms ease;
+}
+
+.tabla-combates tbody tr:hover {
+  background: #f8fbf9;
+}
+
+.luchador {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  min-height: 72px;
+  font-size: 0.98rem;
+  font-weight: 700;
+}
+
+.luchador img {
+  width: 64px;
+  height: 64px;
+  flex: 0 0 64px;
+  border: 2px solid #e8f4ed;
+  border-radius: 50%;
+  background: #edf1ee;
+  object-fit: cover;
+}
+
+.combate-vs {
+  color: #d65e50;
+  font-size: 0.76rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-align: center;
+}
+
+.informacion-entradas {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  margin-top: 40px;
+  padding: 26px 30px;
+  border-radius: 16px;
+  background: #202e27;
+  color: #fff;
+}
+
+.informacion-entradas .informacion-etiqueta {
+  color: #8ed0a9;
+}
+
+.informacion-entradas h2 {
+  margin: 0;
+  font-size: clamp(1.2rem, 4vw, 1.8rem);
+}
+
+.informacion-entradas > a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  padding: 13px 18px;
+  border-radius: 8px;
+  background: #36a174;
+  color: #fff;
+  font-weight: 800;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background 160ms ease, transform 160ms ease;
+}
+
+.informacion-entradas > a:hover {
+  transform: translateY(-2px);
+  background: #27845d;
+}
+
+@media (max-width: 700px) {
+  .informacion-page {
+    padding: 28px 16px 48px;
+  }
+
+  .evento-datos {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    margin-bottom: 44px;
+  }
+
+  .evento-dato {
+    min-height: 0;
+    padding: 18px;
+  }
+}
+
+@media (max-width: 520px) {
+  .tabla-combates thead {
+    display: none;
+  }
+
+  .tabla-combates,
+  .tabla-combates tbody {
+    display: block;
+  }
+
+  .tabla-combates tbody tr {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 34px minmax(0, 1fr);
+    align-items: center;
+    padding: 12px;
+    border-top: 1px solid #edf1ee;
+  }
+
+  .tabla-combates td {
+    min-width: 0;
+    padding: 4px;
+    border: 0;
+  }
+
+  .tabla-combates td::before {
+    content: none;
+  }
+
+  .luchador {
+    flex-direction: column;
+    gap: 7px;
+    text-align: center;
+    overflow-wrap: anywhere;
+    font-size: 0.82rem;
+  }
+
+  .luchador img {
+    width: 58px;
+    height: 58px;
+    flex-basis: 58px;
+  }
+
+  .informacion-entradas {
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 22px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .informacion-volver,
+  .tabla-combates tbody tr,
+  .informacion-entradas > a {
+    transition: none;
+  }
+}
