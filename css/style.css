@@ -1,3 +1,79 @@
+:root {
+  color-scheme: dark;
+  --text: #fff;
+  --muted: #fff;
+  --muted: #fff;
+  min-height: 100%;
+  background-color: #151a1d;
+  background-image:
+    radial-gradient(ellipse at 88% 4%, rgba(45, 133, 116, 0.2), transparent 34rem),
+    radial-gradient(ellipse at 8% 92%, rgba(191, 76, 70, 0.14), transparent 36rem);
+  background-attachment: fixed;
+  color: var(--text);
+  font-family: "Trebuchet MS", Arial, sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  color: var(--text);
+  background: transparent;
+}
+
+main {
+  width: min(100%, 960px);
+  margin: 0 auto;
+}
+
+h1 { color: #fff; }
+p { line-height: 1.6; }
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #20282d;
+  color: #fff;
+}
+
+th, td {
+  padding: 14px;
+  border-bottom: 1px solid #374148;
+  color: #fff;
+  text-align: left;
+}
+
+th { background: #151a1d; }
+
+.horarios-page, .contactos-page { padding: 40px 24px 64px; }
+.horarios { width: min(100%, 900px); margin: 0 auto; }
+.horarios h1, .contactos-page h1 { margin-top: 0; }
+.horarios .tabla-contenedor { overflow-x: auto; border: 1px solid #374148; border-radius: 10px; }
+.horarios table { min-width: 520px; }
+.horarios tbody tr:nth-child(even) { background: #29343a; }
+.horarios .mas-info { margin-top: 20px; }
+.horarios .mas-info a { color: #fff; font-weight: 700; }
+
+.entradas-page { padding: 40px 20px; }
+.entradas { width: min(100%, 1000px); margin: 0 auto; }
+.entradas h1 { margin: 0 0 10px; font-size: 2.5rem; }
+.entradas .intro { margin: 0 0 24px; }
+.entradas .table-container { overflow-x: auto; border: 1px solid #374148; border-radius: 10px; }
+.entradas table { min-width: 650px; background: #20282d; }
+.entradas caption { padding: 16px; background: #29343a; text-align: left; font-size: 1.1rem; font-weight: 700; }
+.entradas th { background: #151a1d; }
+.entradas tbody tr:last-child td { border-bottom: 0; }
+.entradas .category, .entradas .price, .entradas .color { white-space: nowrap; }
+.entradas .category, .entradas .price { font-weight: 700; }
+.entradas .cat-1 td:first-child { border-left: 6px solid #ef6464; }
+.entradas .cat-2 td:first-child { border-left: 6px solid #4788ee; }
+.entradas .cat-3 td:first-child { border-left: 6px solid #60c5f2; }
+.entradas .cat-4 td:first-child { border-left: 6px solid #facc15; }
+.entradas .cat-5 td:first-child { border-left: 6px solid #55c984; }
+.entradas .pista { margin: 24px 0; }
+.entradas .pista img { display: block; width: min(100%, 820px); height: auto; }
+
 .actividad {
   display: flex;
   gap: 20px;
@@ -5,13 +81,8 @@
 
 .actividades-page {
   min-height: 100vh;
-  margin: 0;
   padding: 48px 24px 72px;
-  background:
-    radial-gradient(ellipse at 85% 0%, rgba(180, 49, 56, 0.22), transparent 38rem),
-    #10121b;
-  color: #f5f1eb;
-  font-family: Arial, Helvetica, sans-serif;
+  background: transparent;
 }
 
 .actividades {
@@ -26,7 +97,7 @@
 .actividades-volver {
   display: inline-block;
   margin-bottom: 44px;
-  color: #d7c5a2;
+  color: #fff;
   font-size: 0.9rem;
   text-decoration: none;
   transition: color 160ms ease;
@@ -39,7 +110,7 @@
 
 .actividades-eyebrow {
   margin: 0 0 12px;
-  color: #e7a45d;
+  color: #fff;
   font-size: 0.78rem;
   font-weight: 700;
   letter-spacing: 0.16em;
@@ -49,15 +120,15 @@
 .actividades-hero h1 {
   max-width: 700px;
   margin: 0;
-  font-size: clamp(2.6rem, 8vw, 5.3rem);
-  letter-spacing: -0.06em;
+  font-size: 4rem;
+  letter-spacing: 0;
   line-height: 0.98;
 }
 
 .actividades-intro {
   max-width: 560px;
   margin: 20px 0 24px;
-  color: #b8b6bd;
+  color: var(--muted);
   font-size: 1.1rem;
   line-height: 1.65;
 }
@@ -72,7 +143,7 @@
   padding: 8px 13px;
   border: 1px solid rgba(255, 255, 255, 0.14);
   border-radius: 999px;
-  color: #e1d9cf;
+  color: #fff;
   font-size: 0.82rem;
 }
 
@@ -120,7 +191,7 @@
 .actividad-contenido h2 {
   margin: 6px 0 8px;
   color: #fff;
-  font-size: clamp(1.15rem, 3vw, 1.5rem);
+  font-size: 1.4rem;
   line-height: 1.25;
 }
 
@@ -189,6 +260,9 @@
     gap: 8px;
     padding: 20px;
   }
+
+  .actividades-hero h1 { font-size: 2.7rem; }
+  .actividad-contenido h2 { font-size: 1.2rem; }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -200,11 +274,8 @@
 
 .inicio {
   min-height: 100vh;
-  margin: 0;
   padding: 64px 24px;
-  color: #202526;
-  background: #f1f7f3;
-  font-family: "Trebuchet MS", sans-serif;
+  background: transparent;
 }
 
 .portada {
@@ -214,7 +285,7 @@
 
 .etiqueta {
   margin: 0 0 14px;
-  color: #14805e;
+  color: #80d1ae;
   font-size: 0.82rem;
   font-weight: 800;
   letter-spacing: 0;
@@ -224,12 +295,13 @@
   margin: 0;
   font-size: 3.8rem;
   line-height: 0.98;
+  letter-spacing: 0;
 }
 
 .descripcion {
   max-width: 540px;
   margin: 22px 0 32px;
-  color: #53615a;
+  color: var(--muted);
   font-size: 1.1rem;
   line-height: 1.6;
 }
@@ -261,7 +333,7 @@
 }
 
 .boton:focus-visible {
-  outline: 3px solid #202526;
+  outline: 3px solid #fff;
   outline-offset: 3px;
 }
 
@@ -269,10 +341,10 @@
   font-size: 1.4rem;
 }
 
-.boton-info { background: #e34f4f; }
-.boton-horarios { background: #3977d5; }
-.boton-actividades { background: #26986f; }
-.boton-contacto { background: #d68b18; }
+.boton-info { background: #b93636; }
+.boton-horarios { background: #245bb0; }
+.boton-actividades { background: #15734e; }
+.boton-contacto { background: #885600; }
 
 @media (max-width: 520px) {
   .inicio { padding: 48px 20px; }
@@ -291,13 +363,8 @@
 
 .informacion-page {
   min-height: 100vh;
-  margin: 0;
   padding: 48px 24px 72px;
-  background:
-    radial-gradient(ellipse at 12% 0%, rgba(47, 138, 99, 0.16), transparent 34rem),
-    #f1f7f3;
-  color: #202526;
-  font-family: "Trebuchet MS", Arial, sans-serif;
+  background: transparent;
 }
 
 .informacion {
@@ -312,7 +379,7 @@
 .informacion-volver {
   display: inline-block;
   margin-bottom: 38px;
-  color: #39775f;
+  color: #80d1ae;
   font-size: 0.9rem;
   font-weight: 700;
   text-decoration: none;
@@ -320,12 +387,12 @@
 
 .informacion-volver:hover,
 .informacion-volver:focus-visible {
-  color: #174d38;
+  color: #fff;
 }
 
 .informacion-etiqueta {
   margin: 0 0 9px;
-  color: #14805e;
+  color: #80d1ae;
   font-size: 0.75rem;
   font-weight: 800;
   letter-spacing: 0.14em;
@@ -334,14 +401,14 @@
 
 .informacion-hero h1 {
   margin: 0;
-  font-size: clamp(2.8rem, 8vw, 5rem);
-  letter-spacing: -0.06em;
+  font-size: 4rem;
+  letter-spacing: 0;
   line-height: 1;
 }
 
 .informacion-intro {
   margin: 14px 0 0;
-  color: #53615a;
+  color: var(--muted);
   font-size: 1.1rem;
   line-height: 1.6;
 }
@@ -359,9 +426,9 @@
   gap: 14px;
   min-height: 116px;
   padding: 22px;
-  border: 1px solid #e0e9e2;
+  border: 1px solid #374148;
   border-radius: 14px;
-  background: #fff;
+  background: #20282d;
   box-shadow: 0 12px 28px rgba(34, 74, 53, 0.06);
 }
 
@@ -372,7 +439,7 @@
   flex: 0 0 38px;
   place-items: center;
   border-radius: 11px;
-  background: #e8f4ed;
+  background: #151a1d;
   color: #14805e;
   font-size: 1.2rem;
   font-weight: 800;
@@ -400,32 +467,34 @@
 
 .evento-seccion-titulo h2 {
   margin: 0;
-  font-size: clamp(2rem, 5vw, 3rem);
-  letter-spacing: -0.05em;
+  font-size: 2.6rem;
+  letter-spacing: 0;
 }
 
 .evento-seccion-titulo > p:last-child {
   margin: 8px 0 0;
-  color: #647069;
+  color: var(--muted);
 }
 
 .tabla-combates-contenedor {
   overflow: hidden;
-  border: 1px solid #e0e9e2;
+  border: 1px solid #374148;
   border-radius: 16px;
-  background: #fff;
+  background: #20282d;
   box-shadow: 0 16px 40px rgba(34, 74, 53, 0.08);
 }
 
 .tabla-combates {
   width: 100%;
   border-collapse: collapse;
+  background: #20282d;
+  color: #fff;
 }
 
 .tabla-combates th {
   padding: 15px 24px;
-  background: #e8f4ed;
-  color: #39775f;
+  background: #151a1d;
+  color: #fff;
   font-size: 0.72rem;
   letter-spacing: 0.12em;
   text-align: left;
@@ -439,7 +508,8 @@
 
 .tabla-combates td {
   padding: 14px 24px;
-  border-top: 1px solid #edf1ee;
+  border-top: 1px solid #374148;
+  color: #fff;
 }
 
 .tabla-combates tbody tr {
@@ -447,7 +517,7 @@
 }
 
 .tabla-combates tbody tr:hover {
-  background: #f8fbf9;
+  background: #29343a;
 }
 
 .luchador {
@@ -463,9 +533,9 @@
   width: 64px;
   height: 64px;
   flex: 0 0 64px;
-  border: 2px solid #e8f4ed;
+  border: 2px solid #374148;
   border-radius: 50%;
-  background: #edf1ee;
+  background: #151a1d;
   object-fit: cover;
 }
 
@@ -505,7 +575,7 @@
   gap: 14px;
   padding: 13px 18px;
   border-radius: 8px;
-  background: #36a174;
+  background: #1d744f;
   color: #fff;
   font-weight: 800;
   text-decoration: none;
@@ -515,7 +585,7 @@
 
 .informacion-entradas > a:hover {
   transform: translateY(-2px);
-  background: #27845d;
+  background: #185c3f;
 }
 
 @media (max-width: 700px) {
@@ -533,6 +603,9 @@
     min-height: 0;
     padding: 18px;
   }
+
+  .informacion-hero h1 { font-size: 2.8rem; }
+  .evento-seccion-titulo h2 { font-size: 2rem; }
 }
 
 @media (max-width: 520px) {
@@ -590,4 +663,15 @@
   .informacion-entradas > a {
     transition: none;
   }
+}
+
+body.inicio *,
+body.entradas-page *,
+body.horarios-page *,
+body.actividades-page *,
+body.informacion-page *,
+body.contactos-page *,
+body.actividades-page .actividad-card *,
+body.informacion-page .informacion-entradas * {
+  color: #fff;
 }
