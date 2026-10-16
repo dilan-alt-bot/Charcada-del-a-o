@@ -591,3 +591,132 @@
     transition: none;
   }
 }
+/* ==========================================
+   ESTILOS PARA EL PIE DE PÁGINA (FONDO CLARO)
+   ========================================== */
+
+.main-footer {
+  background-color: #ffffff; /* Fondo blanco */
+  color: #222222; /* Texto oscuro */
+  font-family: Arial, sans-serif;
+  padding-top: 40px;
+  border-top: none;
+  text-align: center;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px 30px 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+  justify-items: center;
+}
+
+.footer-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.footer-col h3.footer-logo {
+  color: #111111;
+  font-size: 1.5rem;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.footer-col .footer-event {
+  color: #ff4655;
+  font-weight: bold;
+  font-size: 0.95rem;
+  margin-bottom: 12px;
+}
+
+.footer-col h4 {
+  color: #111111;
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #ff4655;
+  display: inline-block;
+  padding-bottom: 4px;
+}
+
+.footer-col p {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: #555555;
+  margin-bottom: 8px;
+}
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-col ul li {
+  margin-bottom: 8px;
+}
+
+.footer-col ul li a {
+  color: #444444;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.3s ease;
+}
+
+.footer-col ul li a:hover {
+  color: #ff4655;
+  text-decoration: underline;
+}
+
+.ods-badge {
+  margin-top: 15px;
+  background-color: #f0fdf4;
+  padding: 8px 12px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  color: #166534;
+  border: 1px solid #bbf7d0;
+}
+
+/* Barra inferior */
+.footer-bottom {
+  background-color: #f9fafb; /* Un gris muy claro para diferenciar la barra inferior */
+  padding: 15px 20px;
+  border-top: 1px solid #e5e7eb;
+}
+
+.footer-bottom-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.85rem;
+  color: #6b7280;
+  text-align: center;
+  gap: 6px;
+}
+
+.footer-bottom .authors {
+  color: #4b5563;
+}
+
+.footer-bottom strong {
+  color: #111827;
+}
+
+/* Responsivo para móviles */
+@media (max-width: 768px) {
+  .footer-bottom-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+}
