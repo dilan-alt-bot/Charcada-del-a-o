@@ -2,7 +2,6 @@
   color-scheme: dark;
   --text: #fff;
   --muted: #fff;
-  --muted: #fff;
   min-height: 100%;
   background-color: #151a1d;
   background-image:
@@ -305,6 +304,17 @@ th { background: #151a1d; }
   font-size: 1.1rem;
   line-height: 1.6;
 }
+
+.descripcion-evento {
+  width: min(100% - 40px, 800px);
+  margin: 64px auto 0;
+  padding-top: 24px;
+  border-top: 1px solid #374148;
+  color: #fff;
+  line-height: 1.75;
+}
+
+.descripcion-evento p { margin: 0; }
 
 .enlaces {
   display: grid;
@@ -674,4 +684,151 @@ body.contactos-page *,
 body.actividades-page .actividad-card *,
 body.informacion-page .informacion-entradas * {
   color: #fff;
+}
+
+
+.main-footer {
+  margin-top: 36px;
+  background-color: #20282d;
+  color: #fff;
+  font-family: Arial, sans-serif;
+  padding-top: 40px;
+  border-top: none;
+  text-align: center;
+}
+
+.main-footer.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 600ms ease, transform 600ms ease;
+}
+
+.main-footer.reveal-on-scroll.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px 30px 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+  justify-items: center;
+}
+
+.footer-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.footer-col h3.footer-logo {
+  color: #fff;
+  font-size: 1.5rem;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.footer-col .footer-event {
+  color: #fff;
+  font-weight: bold;
+  font-size: 0.95rem;
+  margin-bottom: 12px;
+}
+
+.footer-col h4 {
+  color: #fff;
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #ff4655;
+  display: inline-block;
+  padding-bottom: 4px;
+}
+
+.footer-col p {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: #fff;
+  margin-bottom: 8px;
+}
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-col ul li {
+  margin-bottom: 8px;
+}
+
+.footer-col ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.3s ease;
+}
+
+.footer-col ul li a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.ods-badge {
+  margin-top: 15px;
+  background-color: #151a1d;
+  padding: 8px 12px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  color: #fff;
+  border: 1px solid #374148;
+}
+
+/* Barra inferior */
+.footer-bottom {
+  background-color: #151a1d;
+  padding: 15px 20px;
+  border-top: 1px solid #374148;
+}
+
+.footer-bottom-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.85rem;
+  color: #fff;
+  text-align: center;
+  gap: 6px;
+}
+
+.footer-bottom .authors {
+  color: #fff;
+}
+
+.footer-bottom strong {
+  color: #fff;
+}
+
+/* Responsivo para móviles */
+@media (max-width: 768px) {
+  .footer-bottom-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .main-footer.reveal-on-scroll {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
 }
