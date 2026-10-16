@@ -2,82 +2,137 @@
 <html lang="es">
 <head>
    <meta charset="UTF-8">
-   <title>Actividades</title>
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta name="theme-color" content="#10121b">
+   <title>Actividades | La Charcada del Año</title>
    <link rel="stylesheet" href="../css/style.css">
 </head>
-<body>
-   <h1>Información sobre las actividades del evento</h1>
-   <p class="actividad">
-      <span>18:00 h</span>
-      <span>Alfombra Roja</span>
-      <span>Entrevistadores: José Nogales</span>
-   </p>
-   <p>En esta actividad, el entrevistador será José Nogales y le ira haciendo preguntas a los asistentes que pasen por la alfombra roja.</p>
-<p class="actividad">
-      <span>18:45 h</span>
-      <span>Show de Apertura</span>
-      <span>Cantantes: Magus, Pereira07</span>
-   </p>
-   <p>En esta actividad, se presentarán los cantantes Magus y Pereira07 en un espectáculo de apertura.</p>
-   <p class="actividad">
-      <span>19:15 h</span>
-      <span>Combate 1</span>
-      <span>Peleadores: Churumbel de malaga vs Job Application</span>
-   </p>
-   <p>En esta actividad, abriran las peleas el Churumbel de malaga y Job Application en un combate emocionante.</p>
-   <p class="actividad">
-      <span>19:50 h</span>
-      <span>Actuación Musical 1</span>
-      <span>Cantante: Ricky Edit</span>
-   </p>
-   <p>En esta actividad, se presentará el cantante Ricky Edit en una actuación musical.</p>
-   <p class="actividad">
-      <span>20:15 h</span>
-      <span>Combate 2</span>
-      <span>Peleadores: Peruano  vs Roro</span>
-   </p>
-   <p>En esta actividad, una ribalidad de toda la vida se pelearán el Peruano y el Roro en un combate sin igual.</p>
-      <p class="actividad">
-      <span>20:50 h</span>
-      <span>Actuación Musical 2</span>
-      <span>Cantante: Grecas</span>
-   </p>
-   <p>En esta actividad, se presentará el cantante Grecas con sus famosas canciones.</p>
-      <p class="actividad">
-      <span>21:15 h</span>
-      <span>Combate 3</span>
-      <span>Peleadores: Illo Juan vs. Alberto Instantaneo</span>
-   </p>
-   <p>En esta actividad, se presentará el combate entre Illo Juan y Alberto Instantaneo en una epica pelea.</p>
-      <p class="actividad">
-      <span>21:50 h</span>
-      <span>Actuación Musical 3</span>
-      <span>Cantantes: Métrica y BBtricks</span>
-   </p>
-   <p>En esta actividad, se presentarán a las cantantes Métrica y BBtricks en un concieto sin igual.</p>
-      <p class="actividad">
-      <span>22:30 h </span>
-      <span>Combate 4</span>
-      <span>Peleadores: Aitana vs. Plex</span>
-   </p>
-   <p>En esta actividad, se presentará el combate entre la pareja de Youtube Aitana y Plex en una pelea de amor.</p>
-      <p class="actividad">
-      <span>23:00 h</span>
-      <span>Show Principalde Cierre</span>
-      <span>Cantantes: Sweet fox, Mia Khalifa, Lana Roades</span>
-   </p>
-   <p>En esta actividad, se presentarán a las ultimas y mas eperadas cantantes Sweet fox, Mia Khalifa y Lana Roades en un final sin igual.</p>
-      <p class="actividad">
-      <span>23:40 h  </span>
-      <span>MAIN EVENT</span>
-      <span>Peleadores: Rubius vs. Jeffrey Epstein Clon</span>
-   </p>
-   <p>En esta actividad, se presentará el combate más esperado y epico del evento entre Rubius y Jeffrey Epstein Clon.</p>
-      <p class="actividad">
-      <span>00:10 h</span>
-      <span>Cierre del Evento</span>
-      <span>Entrega de cinturones, ceremonia de premiación y despedida</span>
-   </p>
-   <p>En esta actividad, se realizará la entrega de cinturones, ceremonia de premiación y despedida del evento.</p>
+<body class="actividades-page">
+   <main class="actividades">
+      <header class="actividades-hero">
+         <a class="actividades-volver" href="../pagina_inicio.html">← Volver al inicio</a>
+         <p class="actividades-eyebrow">La Charcada del Año · Programa</p>
+         <h1>Una noche para recordar</h1>
+         <p class="actividades-intro">Combates, música y espectáculo. Consulta aquí todos los momentos de la noche.</p>
+         <div class="actividades-resumen">
+            <span>12 momentos</span>
+            <span>18:00 h — 00:10 h</span>
+         </div>
+      </header>
+
+      <section class="actividades-lista" aria-label="Programa del evento">
+         <article class="actividad-card">
+            <div class="actividad-hora">18:00 <span>h</span></div>
+            <div class="actividad-contenido">
+               <span class="actividad-tipo">Bienvenida</span>
+               <h2>Alfombra Roja</h2>
+               <p class="actividad-detalle">Entrevistador: José Nogales</p>
+               <p>José Nogales hará preguntas a los asistentes que pasen por la alfombra roja.</p>
+            </div>
+         </article>
+
+         <article class="actividad-card">
+            <div class="actividad-hora">18:45 <span>h</span></div>
+            <div class="actividad-contenido">
+               <span class="actividad-tipo">Espectáculo</span>
+               <h2>Show de Apertura</h2>
+               <p class="actividad-detalle">Cantantes: Magus y Pereira07</p>
+               <p>Magus y Pereira07 darán comienzo a la noche con el espectáculo de apertura.</p>
+            </div>
+         </article>
+
+         <article class="actividad-card actividad-card-combate">
+            <div class="actividad-hora">19:15 <span>h</span></div>
+            <div class="actividad-contenido">
+               <span class="actividad-tipo">Combate 1</span>
+               <h2>Churumbel de Málaga <span class="actividad-vs">vs.</span> Job Application</h2>
+               <p>El primer combate de la noche abre la competición.</p>
+            </div>
+         </article>
+
+         <article class="actividad-card actividad-card-musica">
+            <div class="actividad-hora">19:50 <span>h</span></div>
+            <div class="actividad-contenido">
+               <span class="actividad-tipo">Música · Actuación 1</span>
+               <h2>Ricky Edit</h2>
+               <p>Actuación musical en directo.</p>
+            </div>
+         </article>
+
+         <article class="actividad-card actividad-card-combate">
+            <div class="actividad-hora">20:15 <span>h</span></div>
+            <div class="actividad-contenido">
+               <span class="actividad-tipo">Combate 2</span>
+               <h2>Peruano <span class="actividad-vs">vs.</span> Roro</h2>
+               <p>Una rivalidad de toda la vida se resuelve en un combate sin igual.</p>
+            </div>
+         </article>
+
+         <article class="actividad-card actividad-card-musica">
+            <div class="actividad-hora">20:50 <span>h</span></div>
+            <div class="actividad-contenido">
+               <span class="actividad-tipo">Música · Actuación 2</span>
+               <h2>Grecas</h2>
+               <p>Grecas llega al escenario con sus canciones.</p>
+            </div>
+         </article>
+
+         <article class="actividad-card actividad-card-combate">
+            <div class="actividad-hora">21:15 <span>h</span></div>
+            <div class="actividad-contenido">
+               <span class="actividad-tipo">Combate 3</span>
+               <h2>Illo Juan <span class="actividad-vs">vs.</span> Alberto Instantáneo</h2>
+               <p>Un nuevo combate para seguir animando la noche.</p>
+            </div>
+         </article>
+
+         <article class="actividad-card actividad-card-musica">
+            <div class="actividad-hora">21:50 <span>h</span></div>
+            <div class="actividad-contenido">
+               <span class="actividad-tipo">Música · Actuación 3</span>
+               <h2>Métrica y BBtricks</h2>
+               <p>Actuación musical de Métrica y BBtricks.</p>
+            </div>
+         </article>
+
+         <article class="actividad-card actividad-card-combate">
+            <div class="actividad-hora">22:30 <span>h</span></div>
+            <div class="actividad-contenido">
+               <span class="actividad-tipo">Combate 4</span>
+               <h2>Aitana <span class="actividad-vs">vs.</span> Plex</h2>
+               <p>La pareja de YouTube se enfrenta en un combate muy esperado.</p>
+            </div>
+         </article>
+
+         <article class="actividad-card actividad-card-musica">
+            <div class="actividad-hora">23:00 <span>h</span></div>
+            <div class="actividad-contenido">
+               <span class="actividad-tipo">Espectáculo · Show principal</span>
+               <h2>Show Principal de Cierre</h2>
+               <p class="actividad-detalle">Cantantes: Sweet Fox, Mia Khalifa y Lana Roades</p>
+               <p>Las actuaciones finales de la noche ponen el broche al espectáculo.</p>
+            </div>
+         </article>
+
+         <article class="actividad-card actividad-card-destacada">
+            <div class="actividad-hora">23:40 <span>h</span></div>
+            <div class="actividad-contenido">
+               <span class="actividad-tipo">Evento principal</span>
+               <h2>MAIN EVENT</h2>
+               <p class="actividad-detalle">Rubius <span class="actividad-vs">vs.</span> Jeffrey Epstein Clon</p>
+               <p>El combate más esperado de la noche.</p>
+            </div>
+         </article>
+
+         <article class="actividad-card">
+            <div class="actividad-hora">00:10 <span>h</span></div>
+            <div class="actividad-contenido">
+               <span class="actividad-tipo">Despedida</span>
+               <h2>Cierre del Evento</h2>
+               <p>Entrega de cinturones, ceremonia de premiación y despedida.</p>
+            </div>
+         </article>
+      </section>
+   </main>
 </body>
 </html>

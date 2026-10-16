@@ -1,47 +1,97 @@
 <!DOCTYPE html>
 <html lang="es">
-   <head><meta charset="UTF-8">
-      <title>Información del Evento</title>
-<body><h1>Información del Evento</h1>
-   <p><strong>Edición Velada: </strong>La Velada del Año IV: ByteForge edition</p>
-   <p><strong>Lugar de Eevento: </strong>Estadio Cívitas Metropolitano (Madrid, España)</p>
-   <p><strong>Fecha del Evento: </strong>Sábado, 17 de Julio de 2027</p>
-   <h3>Luchadores</h3>
-   <table>
-      <thead>
-         <tr>
-            <th>Luchador 1</th>
-            <th>  </th>
-            <th>Luchador 2</th>
-         </tr>
-      </thead>
-      <tbody>
-         <tr>
-            <td>Rubius<img width="100" height="100" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS48iuVzB9EfRozedCTNUXya9IJmj3fmMyeDBX61usLBA&s=10"></td>
-            <td>V.S.</td>
-            <td>Jeffrey Epstein Clon<img width="100" height="100" src="https://ichef.bbci.co.uk/ace/ws/640/cpsprodpb/DDDC/production/_108269765_hi055775058-1.jpg.webp"></td>
-         </tr>
-         <tr>
-            <td>IlloJuan<img width="100" height="100" src="https://img.blogs.es/vizzagency/wp-content/uploads/2022/09/illojuanedit-819x1024.jpg"></td>
-            <td>V.S.</td>
-            <td>Alberto Instantaneo<img width="100" height="100" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDf82MJAxn_EXOokRIJ1lYNbjs3YXQMTDcXQy3e5Sz6OM7xP1wKCwcemU&s=10"></td>
-         </tr>
-         <tr>
-            <td>Peruano<img width="100" height="100" src="https://i.pinimg.com/236x/0d/5b/12/0d5b12c784e83d7c0d5fc9e0af66fe97.jpg"></td>
-            <td>V.S.</td>
-            <td>Roro<img width="100" height="100" src="https://e01-elmundo.uecdn.es/assets/multimedia/imagenes/2024/07/27/17220389677514.jpg"></td>
-         </tr>
-         <tr>
-            <td>Churumbel de Malaga<img width="100" height="100" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCwN2KB10G4-YcY4h02jggl0KT3pCSfqJ28yteWkagDQ&s=10"></td>
-            <td>V.S.</td>
-            <td>Job Application<img width="100" height="100" src="https://eforms.com/images/2018/03/Employment-Job-Application-550x712.png"></td>
-         </tr>
-         <tr>
-            <td>Aitana<img width="100" height="100" src="https://hips.hearstapps.com/hmg-prod/images/aitana-6874f97f0dff3.jpg?crop=1.00xw:0.801xh;0,0.0167xh&resize=1200:*"></td>
-            <td>V.S.</td>
-            <td>Plex<img width="100" height="100" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQsmg0w-ZODQsQifeGz85rBEVQTwxkfBsZknSuEsIj3gg&s=10"></td>
-         </tr>
-      </tbody>
-   </table>
-   <h2>Entradas para el evento</h2>
-   <a href="C:\Users\polmo\Desktop\Charcada-del-a-o\entradas.html" target="_blank" rel="noopener noreferrer">Enlace entradas</a>
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Información del evento | La Charcada del Año</title>
+   <link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="informacion-page">
+   <main class="informacion">
+      <header class="informacion-hero">
+         <a class="informacion-volver" href="../pagina_inicio.html">← Volver al inicio</a>
+         <p class="informacion-etiqueta">La Charcada del Año · 2027</p>
+         <h1>El evento</h1>
+         <p class="informacion-intro">Todo lo que necesitas saber antes de que empiece la noche.</p>
+      </header>
+
+      <section class="evento-datos" aria-label="Datos del evento">
+         <article class="evento-dato">
+            <span class="evento-dato-icono" aria-hidden="true">✦</span>
+            <div>
+               <h2>Edición</h2>
+               <p>La Velada del Año IV: ByteForge edition</p>
+            </div>
+         </article>
+         <article class="evento-dato">
+            <span class="evento-dato-icono" aria-hidden="true">⌖</span>
+            <div>
+               <h2>Lugar</h2>
+               <p>Estadio Cívitas Metropolitano<br>Madrid, España</p>
+            </div>
+         </article>
+         <article class="evento-dato">
+            <span class="evento-dato-icono" aria-hidden="true">◷</span>
+            <div>
+               <h2>Fecha</h2>
+               <p>Sábado, 17 de julio de 2027</p>
+            </div>
+         </article>
+      </section>
+
+      <section class="evento-combates" aria-labelledby="combates-titulo">
+         <div class="evento-seccion-titulo">
+            <p class="informacion-etiqueta">Cara a cara</p>
+            <h2 id="combates-titulo">Los combates</h2>
+            <p>Estos son los enfrentamientos de la noche.</p>
+         </div>
+         <div class="tabla-combates-contenedor">
+            <table class="tabla-combates">
+               <thead>
+                  <tr>
+                     <th scope="col">Luchador 1</th>
+                     <th scope="col" aria-label="Enfrentamiento"></th>
+                     <th scope="col">Luchador 2</th>
+                  </tr>
+               </thead>
+               <tbody>
+                  <tr>
+                     <td data-label="Luchador 1"><div class="luchador"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCwN2KB10G4-YcY4h02jggl0KT3pCSfqJ28yteWkagDQ&amp;s=10" alt="Churumbel de Málaga" loading="lazy"><span>Churumbel de Málaga</span></div></td>
+                     <td class="combate-vs" data-label="Enfrentamiento">VS</td>
+                     <td data-label="Luchador 2"><div class="luchador"><img src="https://eforms.com/images/2018/03/Employment-Job-Application-550x712.png" alt="Job Application" loading="lazy"><span>Job Application</span></div></td>
+                  </tr>
+                  <tr>
+                     <td data-label="Luchador 1"><div class="luchador"><img src="https://i.pinimg.com/236x/0d/5b/12/0d5b12c784e83d7c0d5fc9e0af66fe97.jpg" alt="Peruano" loading="lazy"><span>Peruano</span></div></td>
+                     <td class="combate-vs" data-label="Enfrentamiento">VS</td>
+                     <td data-label="Luchador 2"><div class="luchador"><img src="https://e01-elmundo.uecdn.es/assets/multimedia/imagenes/2024/07/27/17220389677514.jpg" alt="Roro" loading="lazy"><span>Roro</span></div></td>
+                  </tr>
+                  <tr>
+                     <td data-label="Luchador 1"><div class="luchador"><img src="https://img.blogs.es/vizzagency/wp-content/uploads/2022/09/illojuanedit-819x1024.jpg" alt="IlloJuan" loading="lazy"><span>IlloJuan</span></div></td>
+                     <td class="combate-vs" data-label="Enfrentamiento">VS</td>
+                     <td data-label="Luchador 2"><div class="luchador"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDf82MJAxn_EXOokRIJ1lYNbjs3YXQMTDcXQy3e5Sz6OM7xP1wKCwcemU&amp;s=10" alt="Alberto Instantáneo" loading="lazy"><span>Alberto Instantáneo</span></div></td>
+                  </tr>
+                  <tr>
+                     <td data-label="Luchador 1"><div class="luchador"><img src="https://hips.hearstapps.com/hmg-prod/images/aitana-6874f97f0dff3.jpg?crop=1.00xw:0.801xh;0,0.0167xh&amp;resize=1200:*" alt="Aitana" loading="lazy"><span>Aitana</span></div></td>
+                     <td class="combate-vs" data-label="Enfrentamiento">VS</td>
+                     <td data-label="Luchador 2"><div class="luchador"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQsmg0w-ZODQsQifeGz85rBEVQTwxkfBsZknSuEsIj3gg&amp;s=10" alt="Plex" loading="lazy"><span>Plex</span></div></td>
+                  </tr>
+                  <tr>
+                     <td data-label="Luchador 1"><div class="luchador"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS48iuVzB9EfRozedCTNUXya9IJmj3fmMyeDBX61usLBA&amp;s=10" alt="Rubius" loading="lazy"><span>Rubius</span></div></td>
+                     <td class="combate-vs" data-label="Enfrentamiento">VS</td>
+                     <td data-label="Luchador 2"><div class="luchador"><img src="https://ichef.bbci.co.uk/ace/ws/640/cpsprodpb/DDDC/production/_108269765_hi055775058-1.jpg.webp" alt="Jeffrey Epstein Clon" loading="lazy"><span>Jeffrey Epstein Clon</span></div></td>
+                  </tr>
+               </tbody>
+            </table>
+         </div>
+      </section>
+
+      <footer class="informacion-entradas">
+         <div>
+            <p class="informacion-etiqueta">¿Te apuntas?</p>
+            <h2>Vive la noche en directo</h2>
+         </div>
+         <a href="../entradas.html">Ver entradas <span aria-hidden="true">→</span></a>
+      </footer>
+   </main>
+</body>
+</html>
