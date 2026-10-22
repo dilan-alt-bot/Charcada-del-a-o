@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="theme-color" content="#151a1d">
+	<title>Comprar entradas | La Charcada del Año</title>
+	<link rel="stylesheet" href="../css/style.css">
+	<script src="../js/compra-entradas.js" defer></script>
+</head>
+<body class="compra-page">
+	<main class="compra-contenido">
+		<header class="compra-hero">
+			<a class="compra-volver" href="../entradas.html">← Ver categorías y ubicaciones</a>
+			<p class="compra-etiqueta">La Charcada del Año · 2027</p>
+			<h1>Compra tus entradas</h1>
+			<p>Indica tus datos y elige cuántas entradas quieres de cada categoría.</p>
+		</header>
+
+		<form id="formulario-compra" class="compra-formulario">
+			<section class="compra-seccion" aria-labelledby="datos-titulo">
+				<div class="compra-seccion-titulo">
+					<span>1</span>
+					<div>
+						<h2 id="datos-titulo">Tus datos</h2>
+						<p>Usaremos el correo para la confirmación de esta compra de demostración.</p>
+					</div>
+				</div>
+				<div class="compra-campos">
+					<div class="campo-compra">
+						<label for="nombre">Nombre</label>
+						<input id="nombre" name="nombre" type="text" autocomplete="given-name" required>
+					</div>
+					<div class="campo-compra">
+						<label for="apellido">Apellidos</label>
+						<input id="apellido" name="apellido" type="text" autocomplete="family-name" required>
+					</div>
+					<div class="campo-compra">
+						<label for="correo">Correo electrónico</label>
+						<input id="correo" name="correo" type="email" autocomplete="email" required>
+					</div>
+					<div class="campo-compra">
+						<label for="telefono">Teléfono <span>(opcional)</span></label>
+						<input id="telefono" name="telefono" type="tel" autocomplete="tel">
+					</div>
+				</div>
+			</section>
+
+			<section class="compra-seccion" aria-labelledby="entradas-titulo">
+				<div class="compra-seccion-titulo">
+					<span>2</span>
+					<div>
+						<h2 id="entradas-titulo">Elige tus entradas</h2>
+						<p>Las cinco categorías, sus precios y ubicaciones están en <a href="../entradas.html">información de entradas</a>.</p>
+					</div>
+				</div>
+				<div class="compra-categorias">
+					<label class="categoria-compra cat-1" for="cantidad-cat-1">
+						<span class="categoria-nombre">Categoría 1 <small>Zona interior, junto a la pista · Opción más exclusiva</small></span>
+						<strong>190,00 €</strong>
+						<span class="cantidad-control"><span class="visually-hidden">Cantidad de entradas de Categoría 1</span><input id="cantidad-cat-1" name="cat-1" type="number" min="0" step="1" value="0" inputmode="numeric"></span>
+					</label>
+					<label class="categoria-compra cat-2" for="cantidad-cat-2">
+						<span class="categoria-nombre">Categoría 2 <small>Sectores laterales interiores · Cerca de la acción</small></span>
+						<strong>124,00 €</strong>
+						<span class="cantidad-control"><span class="visually-hidden">Cantidad de entradas de Categoría 2</span><input id="cantidad-cat-2" name="cat-2" type="number" min="0" step="1" value="0" inputmode="numeric"></span>
+					</label>
+					<label class="categoria-compra cat-3" for="cantidad-cat-3">
+						<span class="categoria-nombre">Categoría 3 <small>Sectores laterales exteriores · Vista amplia a precio intermedio</small></span>
+						<strong>103,00 €</strong>
+						<span class="cantidad-control"><span class="visually-hidden">Cantidad de entradas de Categoría 3</span><input id="cantidad-cat-3" name="cat-3" type="number" min="0" step="1" value="0" inputmode="numeric"></span>
+					</label>
+					<label class="categoria-compra cat-4" for="cantidad-cat-4">
+						<span class="categoria-nombre">Categoría 4 <small>Esquinas inferiores · Una opción más asequible</small></span>
+						<strong>87,00 €</strong>
+						<span class="cantidad-control"><span class="visually-hidden">Cantidad de entradas de Categoría 4</span><input id="cantidad-cat-4" name="cat-4" type="number" min="0" step="1" value="0" inputmode="numeric"></span>
+					</label>
+					<label class="categoria-compra cat-5" for="cantidad-cat-5">
+						<span class="categoria-nombre">Categoría 5 <small>Zonas exteriores elevadas · La más económica</small></span>
+						<strong>53,00 €</strong>
+						<span class="cantidad-control"><span class="visually-hidden">Cantidad de entradas de Categoría 5</span><input id="cantidad-cat-5" name="cat-5" type="number" min="0" step="1" value="0" inputmode="numeric"></span>
+					</label>
+				</div>
+				<p id="error-cantidades" class="compra-error" role="alert" hidden>Selecciona al menos una entrada para continuar.</p>
+			</section>
+
+			<aside class="compra-total" aria-live="polite">
+				<div>
+					<span id="resumen-cantidad">0 entradas seleccionadas</span>
+					<strong>Total</strong>
+				</div>
+				<output id="total-compra" for="cantidad-cat-1 cantidad-cat-2 cantidad-cat-3 cantidad-cat-4 cantidad-cat-5">0,00 €</output>
+			</aside>
+			<p class="aviso-demostracion">Esta web es una demostración: no se realiza ningún cobro ni se emiten entradas reales.</p>
+			<button class="boton-compra" type="submit">Continuar a la venta <span aria-hidden="true">→</span></button>
+		</form>
+	</main>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="theme-color" content="#151a1d">
+	<title>Venta de entradas | La Charcada del Año</title>
+	<link rel="stylesheet" href="../css/style.css">
+	<script src="../js/compra-entradas.js" defer></script>
+</head>
+<body class="compra-page venta-page">
+	<main class="compra-contenido">
+		<header class="compra-hero">
+			<a class="compra-volver" href="compra_entradas.html">← Volver a tus entradas</a>
+			<p class="compra-etiqueta">La Charcada del Año · 2027</p>
+			<h1>Venta de entradas</h1>
+			<p>Revisa tu selección antes de completar el formulario de demostración.</p>
+		</header>
+
+		<section id="pedido-no-disponible" class="compra-seccion" hidden>
+			<h2>No hay una compra pendiente</h2>
+			<p>Vuelve al formulario para elegir tus entradas.</p>
+			<a class="boton-compra boton-enlace" href="compra_entradas.html">Elegir entradas <span aria-hidden="true">→</span></a>
+		</section>
+
+		<div id="contenido-venta" hidden>
+			<section class="compra-seccion resumen-pedido" aria-labelledby="pedido-titulo">
+				<div class="compra-seccion-titulo">
+					<span>1</span>
+					<div>
+						<h2 id="pedido-titulo">Resumen de tu pedido</h2>
+						<p id="pedido-cliente"></p>
+					</div>
+				</div>
+				<ul id="lista-pedido" class="lista-pedido"></ul>
+				<p class="pedido-total"><strong>Total del pedido</strong><output id="total-pedido"></output></p>
+			</section>
+
+			<form id="formulario-pago" class="compra-formulario">
+				<section class="compra-seccion" aria-labelledby="pago-titulo">
+					<div class="compra-seccion-titulo">
+						<span>2</span>
+						<div>
+							<h2 id="pago-titulo">Datos de pago de demostración</h2>
+							<p>En una tienda real, los datos de pago se procesarían mediante una pasarela segura.</p>
+						</div>
+					</div>
+					<p class="aviso-demostracion aviso-pago">No introduzcas datos bancarios reales. Esta web no procesa pagos, no envía ni guarda los datos de esta tarjeta.</p>
+					<div class="compra-campos">
+						<div class="campo-compra campo-completo">
+							<label for="titular">Titular de la tarjeta</label>
+							<input id="titular" name="titular" type="text" autocomplete="off" required>
+						</div>
+						<div class="campo-compra campo-completo">
+							<label for="numero-tarjeta">Número de tarjeta de prueba</label>
+							<input id="numero-tarjeta" name="numero-tarjeta" type="text" inputmode="numeric" autocomplete="off" maxlength="19" pattern="[0-9 ]{13,19}" placeholder="Solo números de prueba" required>
+						</div>
+						<div class="campo-compra">
+							<label for="caducidad">Caducidad</label>
+							<input id="caducidad" name="caducidad" type="month" autocomplete="off" required>
+						</div>
+						<div class="campo-compra">
+							<label for="codigo-seguridad">Código de seguridad de prueba</label>
+							<input id="codigo-seguridad" name="codigo-seguridad" type="password" inputmode="numeric" autocomplete="off" maxlength="4" pattern="[0-9]{3,4}" required>
+						</div>
+						<div class="campo-compra campo-completo">
+							<label for="direccion-facturacion">Dirección de facturación</label>
+							<input id="direccion-facturacion" name="direccion-facturacion" type="text" autocomplete="off" required>
+						</div>
+					</div>
+					<p id="resultado-pago" class="resultado-pago" role="status" hidden></p>
+					<button class="boton-compra" type="submit">Finalizar compra de prueba <span aria-hidden="true">→</span></button>
+				</section>
+			</form>
+		</div>
+	</main>
+</body>
+</html>
