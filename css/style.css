@@ -441,10 +441,6 @@ th {
   width: min(100%, 320px);
 }
 
-.compra-page {
-  min-height: 100vh;
-}
-
 .compra-hero {
   margin-bottom: 24px;
 }
@@ -458,31 +454,13 @@ th {
   gap: 12px;
 }
 
-.compra-seccion-titulo {
-  display: flex;
-  align-items: flex-start;
-  gap: 12px;
-  margin-bottom: 18px;
-}
-
-.compra-seccion-titulo > span {
-  display: grid;
-  width: 30px;
-  height: 30px;
-  flex: 0 0 30px;
-  place-items: center;
-  border: 1px solid #ddd;
-  border-radius: 50%;
-}
-
-.compra-seccion-titulo h2,
 .compra-seccion > h2 {
-  margin: 0;
+  margin-bottom: 8px;
   font-size: 1.2rem;
 }
 
-.compra-seccion-titulo p {
-  margin: 4px 0 0;
+.compra-seccion > p {
+  margin-bottom: 16px;
   color: #555;
 }
 

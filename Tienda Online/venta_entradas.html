@@ -3,12 +3,11 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="theme-color" content="#151a1d">
 	<title>Venta de entradas | La Charcada del Año</title>
 	<link rel="stylesheet" href="../css/style.css">
 	<script src="../js/compra-entradas.js" defer></script>
 </head>
-<body class="compra-page venta-page">
+<body class="compra-page">
 	<main class="compra-contenido">
 		<header class="compra-hero">
 			<a class="compra-volver" href="compra_entradas.html">← Volver a tus entradas</a>
@@ -24,27 +23,17 @@
 		</section>
 
 		<div id="contenido-venta" hidden>
-			<section class="compra-seccion resumen-pedido" aria-labelledby="pedido-titulo">
-				<div class="compra-seccion-titulo">
-					<span>1</span>
-					<div>
-						<h2 id="pedido-titulo">Resumen de tu pedido</h2>
-						<p id="pedido-cliente"></p>
-					</div>
-				</div>
+			<section class="compra-seccion" aria-labelledby="pedido-titulo">
+				<h2 id="pedido-titulo">Resumen de tu pedido</h2>
+				<p id="pedido-cliente"></p>
 				<ul id="lista-pedido" class="lista-pedido"></ul>
 				<p class="pedido-total"><strong>Total del pedido</strong><output id="total-pedido"></output></p>
 			</section>
 
 			<form id="formulario-pago" class="compra-formulario">
 				<section class="compra-seccion" aria-labelledby="pago-titulo">
-					<div class="compra-seccion-titulo">
-						<span>2</span>
-						<div>
-							<h2 id="pago-titulo">Datos de pago de demostración</h2>
-							<p>En una tienda real, los datos de pago se procesarían mediante una pasarela segura.</p>
-						</div>
-					</div>
+					<h2 id="pago-titulo">Datos de pago de demostración</h2>
+					<p>En una tienda real, los datos de pago se procesarían mediante una pasarela segura.</p>
 					<p class="aviso-demostracion aviso-pago">No introduzcas datos bancarios reales. Esta web no procesa pagos, no envía ni guarda los datos de esta tarjeta.</p>
 					<div class="compra-campos">
 						<div class="campo-compra campo-completo">
