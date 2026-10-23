@@ -142,9 +142,9 @@ th {
 
 .enlaces {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 12px;
-  max-width: 600px;
+  max-width: 800px;
 }
 
 .faq-page {
@@ -331,27 +331,32 @@ th {
 }
 
 .tabla-combates th:nth-child(2) {
-  width: 64px;
+  width: 72px;
   text-align: center;
+}
+
+.tabla-combates td {
+  vertical-align: middle;
 }
 
 .luchador {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
   min-width: 150px;
 }
 
 .luchador img {
-  width: 48px;
-  height: 48px;
-  flex: 0 0 48px;
-  border-radius: 50%;
+  width: 72px;
+  height: 72px;
+  flex: 0 0 72px;
+  border-radius: 4px;
   object-fit: cover;
 }
 
 .combate-vs {
   font-weight: 700;
+  font-size: 1.1rem;
   text-align: center;
 }
 
@@ -697,6 +702,19 @@ th {
   }
 
   .luchador {
-    min-width: 120px;
+    flex-direction: column;
+    gap: 6px;
+    min-width: 0;
+    text-align: center;
+  }
+
+  .luchador img {
+    width: 64px;
+    height: 64px;
+    flex-basis: 64px;
+  }
+
+  .tabla-combates th:nth-child(2) {
+    width: 48px;
   }
 }
