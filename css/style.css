@@ -104,6 +104,34 @@ th {
   padding: 48px 16px 0;
 }
 
+.inicio-contenido {
+  display: grid;
+  width: min(100%, 1120px);
+  grid-template-columns: minmax(0, 1fr) minmax(240px, 340px);
+  align-items: start;
+  gap: 40px;
+  margin: 0 auto;
+}
+
+.inicio-informacion {
+  min-width: 0;
+}
+
+.inicio-informacion .portada {
+  width: 100%;
+}
+
+.inicio-informacion .descripcion-evento {
+  width: 100%;
+  margin: 48px 0;
+}
+
+.cartel-portada img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
 .portada,
 .legal-contenido,
 .compra-contenido {
@@ -200,7 +228,21 @@ th {
 }
 
 .legal-hero {
+  position: relative;
   margin-bottom: 28px;
+}
+
+.legal-logo {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+}
+
+.legal-hero .etiqueta {
+  padding-right: 76px;
 }
 
 .legal-volver {
@@ -696,5 +738,17 @@ th {
 
   .tabla-combates th:nth-child(2) {
     width: 48px;
+  }
+}
+
+@media (max-width: 899px) {
+  .inicio-contenido {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .cartel-portada {
+    width: min(100%, 340px);
+    margin: 0 auto 32px;
   }
 }
