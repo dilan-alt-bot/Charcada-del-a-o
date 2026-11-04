@@ -13,33 +13,10 @@
 			<a class="compra-volver" href="../entradas.html">← Ver categorías y ubicaciones</a>
 			<p class="compra-etiqueta">La Charcada del Año · 2027</p>
 			<h1>Compra tus entradas</h1>
-			<p>Indica tus datos y elige cuántas entradas quieres de cada categoría.</p>
+			<p>Elige cuántas entradas quieres de cada categoría.</p>
 		</header>
 
 		<form id="formulario-compra" class="compra-formulario">
-			<section class="compra-seccion" aria-labelledby="datos-titulo">
-				<h2 id="datos-titulo">Tus datos</h2>
-				<p>Usaremos el correo para la confirmación de esta compra de demostración.</p>
-				<div class="compra-campos">
-					<div class="campo-compra">
-						<label for="nombre">Nombre</label>
-						<input id="nombre" name="nombre" type="text" autocomplete="given-name" required>
-					</div>
-					<div class="campo-compra">
-						<label for="apellido">Apellidos</label>
-						<input id="apellido" name="apellido" type="text" autocomplete="family-name" required>
-					</div>
-					<div class="campo-compra">
-						<label for="correo">Correo electrónico</label>
-						<input id="correo" name="correo" type="email" autocomplete="email" required>
-					</div>
-					<div class="campo-compra">
-						<label for="telefono">Teléfono <span>(opcional)</span></label>
-						<input id="telefono" name="telefono" type="tel" autocomplete="tel">
-					</div>
-				</div>
-			</section>
-
 			<section class="compra-seccion" aria-labelledby="entradas-titulo">
 				<h2 id="entradas-titulo">Elige tus entradas</h2>
 				<p>Las cinco categorías, sus precios y ubicaciones están en <a href="../entradas.html">información de entradas</a>.</p>
@@ -80,8 +57,7 @@
 				</div>
 				<output id="total-compra" for="cantidad-cat-1 cantidad-cat-2 cantidad-cat-3 cantidad-cat-4 cantidad-cat-5">0,00 €</output>
 			</aside>
-			<p class="aviso-demostracion">Esta web es una demostración: no se realiza ningún cobro ni se emiten entradas reales.</p>
-			<button class="boton-compra" type="submit">Continuar a la venta <span aria-hidden="true">→</span></button>
+			<button class="boton-compra" type="submit">Continuar <span aria-hidden="true">→</span></button>
 		</form>
 	</main>
 </body>

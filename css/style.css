@@ -464,27 +464,6 @@ th {
   color: #555;
 }
 
-.compra-campos {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 12px;
-}
-
-.campo-compra {
-  display: grid;
-  gap: 4px;
-}
-
-.campo-compra label {
-  font-weight: 700;
-}
-
-.campo-compra label span {
-  color: #555;
-  font-weight: 400;
-}
-
-.campo-compra input,
 .cantidad-control input {
   width: 100%;
   min-height: 42px;
@@ -493,10 +472,6 @@ th {
   border-radius: 4px;
   background: #fff;
   color: #222;
-}
-
-.campo-completo {
-  grid-column: 1 / -1;
 }
 
 .compra-categorias {
@@ -576,14 +551,6 @@ th {
   white-space: nowrap;
 }
 
-.aviso-demostracion {
-  margin: 0;
-  padding: 10px 12px;
-  border-left: 3px solid #777;
-  background: #eee;
-  color: #444;
-}
-
 .boton-compra {
   width: fit-content;
 }
@@ -608,11 +575,56 @@ th {
   border-bottom: 1px solid #ddd;
 }
 
-.resultado-pago {
-  margin: 12px 0;
-  padding: 10px;
+.pasarela-simulada {
+  display: grid;
+  gap: 12px;
+}
+
+.pasarela-simulada > p {
+  margin: 0;
+}
+
+.campos-pago {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.campo-pago {
+  display: grid;
+  gap: 4px;
+}
+
+.campo-pago label {
+  font-weight: 700;
+}
+
+.campo-pago input {
+  width: 100%;
+  min-height: 42px;
+  padding: 8px;
   border: 1px solid #bbb;
-  background: #f5f5f5;
+  border-radius: 4px;
+  background: #fff;
+  color: #222;
+}
+
+.campo-pago-completo {
+  grid-column: 1 / -1;
+}
+
+.aviso-simulacion {
+  padding: 12px;
+  border-left: 4px solid #9a5b00;
+  background: #fff3d6;
+  color: #4a2d00;
+}
+
+.resultado-pago {
+  padding: 12px;
+  border-left: 4px solid #287a3d;
+  background: #e8f5eb;
+  color: #174b24;
 }
 
 .main-footer {
@@ -656,11 +668,11 @@ th {
 @media (max-width: 600px) {
   .enlaces,
   .evento-datos,
-  .compra-campos {
+  .campos-pago {
     grid-template-columns: 1fr;
   }
 
-  .campo-completo {
+  .campo-pago-completo {
     grid-column: auto;
   }
 

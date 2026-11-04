@@ -18,7 +18,6 @@ if (formularioCompra) {
 	const total = document.querySelector("#total-compra");
 	const resumenCantidad = document.querySelector("#resumen-cantidad");
 	const errorCantidades = document.querySelector("#error-cantidades");
-	let intentoContinuar = false;
 
 	const leerEntradas = () => categorias.map((categoria, index) => ({
 		...categoria,
@@ -32,7 +31,7 @@ if (formularioCompra) {
 
 		total.value = formatoEuro.format(precioTotal);
 		resumenCantidad.textContent = `${cantidadTotal} ${cantidadTotal === 1 ? "entrada seleccionada" : "entradas seleccionadas"}`;
-		errorCantidades.hidden = cantidadTotal > 0 || !intentoContinuar;
+		errorCantidades.hidden = true;
 	};
 
 	for (const cantidad of cantidades) {
@@ -44,21 +43,13 @@ if (formularioCompra) {
 		if (!formularioCompra.reportValidity()) return;
 
 		const entradas = leerEntradas();
-		if (entradas.every((entrada) => entrada.cantidad === 0)) {
-			intentoContinuar = true;
-			actualizarTotal();
+		if (entradas.every(({ cantidad }) => cantidad === 0)) {
+			errorCantidades.hidden = false;
 			cantidades[0].focus();
 			return;
 		}
 
-		const datos = new FormData(formularioCompra);
 		const pedido = {
-			cliente: {
-				nombre: datos.get("nombre").trim(),
-				apellido: datos.get("apellido").trim(),
-				correo: datos.get("correo").trim(),
-				telefono: datos.get("telefono").trim()
-			},
 			entradas: entradas.filter((entrada) => entrada.cantidad > 0),
 			total: entradas.reduce((suma, entrada) => suma + entrada.cantidad * entrada.precio, 0)
 		};
@@ -88,15 +79,12 @@ if (contenidoVenta) {
 		pedido = JSON.parse(sessionStorage.getItem(almacenamientoPedido));
 	} catch (error) {
 		console.error("No se pudo leer el pedido temporal.", error);
-		pedido = null;
 	}
 
 	if (!pedido || !Array.isArray(pedido.entradas) || pedido.entradas.length === 0) {
 		pedidoNoDisponible.hidden = false;
 	} else {
 		contenidoVenta.hidden = false;
-		document.querySelector("#pedido-cliente").textContent =
-			`${pedido.cliente.nombre} ${pedido.cliente.apellido} · ${pedido.cliente.correo}`;
 		document.querySelector("#total-pedido").textContent = formatoEuro.format(pedido.total);
 
 		const listaPedido = document.querySelector("#lista-pedido");
@@ -114,12 +102,11 @@ if (contenidoVenta) {
 	const formularioPago = document.querySelector("#formulario-pago");
 	formularioPago.addEventListener("submit", (event) => {
 		event.preventDefault();
-		if (!formularioPago.reportValidity()) return;
+		if (!pedido || !Array.isArray(pedido.entradas) || pedido.entradas.length === 0) return;
 
 		document.querySelector("#resultado-pago").textContent =
-			"Compra de prueba completada. No se ha realizado ningún cobro ni se han enviado o guardado datos bancarios.";
+			"Compra realizada correctamente. Gracias por su compra.";
 		document.querySelector("#resultado-pago").hidden = false;
-		formularioPago.reset();
-		sessionStorage.removeItem(almacenamientoPedido);
+		document.querySelector("#boton-pago").disabled = true;
 	});
 }
