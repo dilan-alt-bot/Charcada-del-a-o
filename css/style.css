@@ -79,6 +79,12 @@ button:hover,
   color: #fff;
 }
 
+.compra-page button:hover,
+.compra-page .boton-compra:hover {
+  background: #222;
+  color: #fff;
+}
+
 :focus-visible {
   outline: 3px solid #2457a6;
   outline-offset: 3px;
@@ -158,7 +164,8 @@ th {
 .faq-volver,
 .informacion-volver,
 .compra-volver,
-.actividades-volver {
+.actividades-volver,
+.entradas-volver {
   display: inline-block;
   margin-bottom: 24px;
 }

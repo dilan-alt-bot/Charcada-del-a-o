@@ -13,7 +13,7 @@
 			<a class="compra-volver" href="compra_entradas.html">← Volver a tus entradas</a>
 			<p class="compra-etiqueta">La Charcada del Año · 2027</p>
 			<h1>Pasarela de pago</h1>
-			<p>Revisa tu selección y prueba el pago simulado.</p>
+			<p>Revisa tu selección y prueba el pago.</p>
 		</header>
 
 		<section id="pedido-no-disponible" class="compra-seccion" hidden>
@@ -32,24 +32,24 @@
 			<form id="formulario-pago" class="compra-seccion pasarela-simulada">
 			
 					<div class="campo-pago campo-pago-completo">
-						<label for="numero-tarjeta">Número de tarjeta ficticio</label>
+						<label for="numero-tarjeta">Número de tarjeta</label>
 						<input id="numero-tarjeta" name="numero-tarjeta" type="text" inputmode="numeric" autocomplete="off" maxlength="19" pattern="[0-9 ]{13,19}" placeholder="0000 0000 0000 0000">
 					</div>
 					<div class="campo-pago">
-						<label for="caducidad">Caducidad ficticia</label>
+						<label for="caducidad">Caducidad</label>
 						<input id="caducidad" name="caducidad" type="month" autocomplete="off">
 					</div>
 					<div class="campo-pago">
-						<label for="codigo-seguridad">Código de seguridad ficticio</label>
+						<label for="codigo-seguridad">Código de seguridad</label>
 						<input id="codigo-seguridad" name="codigo-seguridad" type="password" inputmode="numeric" autocomplete="off" maxlength="4" pattern="[0-9]{3,4}" placeholder="000">
 					</div>
 					<div class="campo-pago campo-pago-completo">
-						<label for="direccion-facturacion">Dirección ficticia de facturación</label>
-						<input id="direccion-facturacion" name="direccion-facturacion" type="text" autocomplete="off" placeholder="Dirección inventada">
+						<label for="direccion-facturacion">Dirección de facturación</label>
+						<input id="direccion-facturacion" name="direccion-facturacion" type="text" autocomplete="off" placeholder="Dirección de facturación">
 					</div>
 				</div>
 				<p id="resultado-pago" class="resultado-pago" role="status" hidden></p>
-				<button id="boton-pago" class="boton-compra" type="submit">Simular pago <span aria-hidden="true">→</span></button>
+				<button id="boton-pago" class="boton-compra" type="submit">Pago<span aria-hidden="true">→</span></button>
 			</form>
 		</div>
 	</main>
