@@ -71,17 +71,9 @@ button,
   cursor: pointer;
 }
 
-button:hover,
-.boton:hover,
-.boton-compra:hover,
+a.boton:hover,
+a.boton-compra:hover,
 .informacion-entradas > a:hover {
-  background: #444;
-  color: #fff;
-}
-
-.compra-page button:hover,
-.compra-page .boton-compra:hover {
-  background: #222;
   color: #fff;
 }
 
@@ -295,15 +287,6 @@ th {
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 12px;
   margin: 24px 0 40px;
-}
-
-.evento-dato {
-  display: flex;
-  gap: 12px;
-}
-
-.evento-dato-icono {
-  font-size: 1.2rem;
 }
 
 .evento-dato h2 {
