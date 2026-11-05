@@ -71,11 +71,9 @@ button,
   cursor: pointer;
 }
 
-button:hover,
-.boton:hover,
-.boton-compra:hover,
+a.boton:hover,
+a.boton-compra:hover,
 .informacion-entradas > a:hover {
-  background: #444;
   color: #fff;
 }
 
@@ -104,6 +102,34 @@ th {
 
 .inicio {
   padding: 48px 16px 0;
+}
+
+.inicio-contenido {
+  display: grid;
+  width: min(100%, 1120px);
+  grid-template-columns: minmax(0, 1fr) minmax(240px, 340px);
+  align-items: start;
+  gap: 40px;
+  margin: 0 auto;
+}
+
+.inicio-informacion {
+  min-width: 0;
+}
+
+.inicio-informacion .portada {
+  width: 100%;
+}
+
+.inicio-informacion .descripcion-evento {
+  width: 100%;
+  margin: 48px 0;
+}
+
+.cartel-portada img {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 .portada,
@@ -158,7 +184,8 @@ th {
 .faq-volver,
 .informacion-volver,
 .compra-volver,
-.actividades-volver {
+.actividades-volver,
+.entradas-volver {
   display: inline-block;
   margin-bottom: 24px;
 }
@@ -201,7 +228,21 @@ th {
 }
 
 .legal-hero {
+  position: relative;
   margin-bottom: 28px;
+}
+
+.legal-logo {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+}
+
+.legal-hero .etiqueta {
+  padding-right: 76px;
 }
 
 .legal-volver {
@@ -288,15 +329,6 @@ th {
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 12px;
   margin: 24px 0 40px;
-}
-
-.evento-dato {
-  display: flex;
-  gap: 12px;
-}
-
-.evento-dato-icono {
-  font-size: 1.2rem;
 }
 
 .evento-dato h2 {
@@ -464,27 +496,6 @@ th {
   color: #555;
 }
 
-.compra-campos {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 12px;
-}
-
-.campo-compra {
-  display: grid;
-  gap: 4px;
-}
-
-.campo-compra label {
-  font-weight: 700;
-}
-
-.campo-compra label span {
-  color: #555;
-  font-weight: 400;
-}
-
-.campo-compra input,
 .cantidad-control input {
   width: 100%;
   min-height: 42px;
@@ -493,10 +504,6 @@ th {
   border-radius: 4px;
   background: #fff;
   color: #222;
-}
-
-.campo-completo {
-  grid-column: 1 / -1;
 }
 
 .compra-categorias {
@@ -576,14 +583,6 @@ th {
   white-space: nowrap;
 }
 
-.aviso-demostracion {
-  margin: 0;
-  padding: 10px 12px;
-  border-left: 3px solid #777;
-  background: #eee;
-  color: #444;
-}
-
 .boton-compra {
   width: fit-content;
 }
@@ -608,11 +607,56 @@ th {
   border-bottom: 1px solid #ddd;
 }
 
-.resultado-pago {
-  margin: 12px 0;
-  padding: 10px;
+.pasarela-simulada {
+  display: grid;
+  gap: 12px;
+}
+
+.pasarela-simulada > p {
+  margin: 0;
+}
+
+.campos-pago {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.campo-pago {
+  display: grid;
+  gap: 4px;
+}
+
+.campo-pago label {
+  font-weight: 700;
+}
+
+.campo-pago input {
+  width: 100%;
+  min-height: 42px;
+  padding: 8px;
   border: 1px solid #bbb;
-  background: #f5f5f5;
+  border-radius: 4px;
+  background: #fff;
+  color: #222;
+}
+
+.campo-pago-completo {
+  grid-column: 1 / -1;
+}
+
+.aviso-simulacion {
+  padding: 12px;
+  border-left: 4px solid #9a5b00;
+  background: #fff3d6;
+  color: #4a2d00;
+}
+
+.resultado-pago {
+  padding: 12px;
+  border-left: 4px solid #287a3d;
+  background: #e8f5eb;
+  color: #174b24;
 }
 
 .main-footer {
@@ -656,11 +700,11 @@ th {
 @media (max-width: 600px) {
   .enlaces,
   .evento-datos,
-  .compra-campos {
+  .campos-pago {
     grid-template-columns: 1fr;
   }
 
-  .campo-completo {
+  .campo-pago-completo {
     grid-column: auto;
   }
 
@@ -694,5 +738,17 @@ th {
 
   .tabla-combates th:nth-child(2) {
     width: 48px;
+  }
+}
+
+@media (max-width: 899px) {
+  .inicio-contenido {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .cartel-portada {
+    width: min(100%, 340px);
+    margin: 0 auto 32px;
   }
 }
