@@ -442,12 +442,6 @@ th {
   font-weight: 700;
 }
 
-.entradas .cat-1 td:first-child { border-left: 4px solid #ff0000; }
-.entradas .cat-2 td:first-child { border-left: 4px solid #0062ff; }
-.entradas .cat-3 td:first-child { border-left: 4px solid #9edbf5; }
-.entradas .cat-4 td:first-child { border-left: 4px solid #ffcc00; }
-.entradas .cat-5 td:first-child { border-left: 4px solid #6fff00; }
-
 .entradas .pista {
   margin: 20px 0;
 }
