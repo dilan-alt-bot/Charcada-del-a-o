@@ -213,7 +213,8 @@ th {
 }
 
 .faq-item h2,
-.legal-seccion h2 {
+.legal-seccion h2,
+.compra-seccion > h2 {
   margin-bottom: 8px;
   font-size: 1.2rem;
 }
@@ -480,17 +481,13 @@ th {
   gap: 12px;
 }
 
-.compra-seccion > h2 {
-  margin-bottom: 8px;
-  font-size: 1.2rem;
-}
-
 .compra-seccion > p {
   margin-bottom: 16px;
   color: #555;
 }
 
-.cantidad-control input {
+.cantidad-control input,
+.campo-pago input {
   width: 100%;
   min-height: 42px;
   padding: 8px;
@@ -525,12 +522,12 @@ th {
   font-weight: 400;
 }
 
-.categoria-compra > strong {
-  white-space: nowrap;
-}
-
 .cantidad-control input {
   text-align: center;
+}
+
+.categoria-compra > strong {
+  white-space: nowrap;
 }
 
 .visually-hidden {
@@ -610,12 +607,6 @@ th {
   margin: 0;
 }
 
-.campos-pago {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 12px;
-}
-
 .campo-pago {
   display: grid;
   gap: 4px;
@@ -625,25 +616,8 @@ th {
   font-weight: 700;
 }
 
-.campo-pago input {
-  width: 100%;
-  min-height: 42px;
-  padding: 8px;
-  border: 1px solid #bbb;
-  border-radius: 4px;
-  background: #fff;
-  color: #222;
-}
-
 .campo-pago-completo {
   grid-column: 1 / -1;
-}
-
-.aviso-simulacion {
-  padding: 12px;
-  border-left: 4px solid #9a5b00;
-  background: #fff3d6;
-  color: #4a2d00;
 }
 
 .resultado-pago {
@@ -693,8 +667,7 @@ th {
 
 @media (max-width: 600px) {
   .enlaces,
-  .evento-datos,
-  .campos-pago {
+  .evento-datos {
     grid-template-columns: 1fr;
   }
 
