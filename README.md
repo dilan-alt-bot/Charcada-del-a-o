@@ -38,14 +38,6 @@ La web permite consultar información sobre el evento, conocer los combates, vis
 - Secciones informativas y legales.
 - Navegación entre las diferentes páginas de la web.
 
-## Instalación y uso
-
-1. Descargar o clonar el repositorio de GitHub.
-2. Abrir la carpeta del proyecto.
-3. Ejecutar el archivo `index.html` en un navegador web.
-4. Navegar por las diferentes secciones de la página.
-
-No es necesario instalar dependencias adicionales para visualizar la versión web, siempre que los archivos y recursos estén correctamente descargados.
 
 ## Integrantes del proyecto
 
